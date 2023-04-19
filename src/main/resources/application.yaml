@@ -3,3 +3,25 @@ server:
 spring:
   webflux:
     base-path: /indexer
+
+management:
+  health:
+    elasticsearch:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "health, info"
+#  endpoint:
+#    health:
+#      enabled: true
+#    info:
+#      enabled: true
+#  endpoints:
+#    web:
+#      cors:
+#        allowed-origins: "*"
+#        allowed-methods: "*"
+#      exposure:
+#        include: "*"
+
